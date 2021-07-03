@@ -19,8 +19,9 @@ class CreateVaccinesTable extends Migration
             $table->integer('idparent')->default(0);
             $table->string('status')->nullable();
             $table->integer('amount')->nullable();
-            $table->text('image')->nullable();
+            $table->string('image')->nullable();
             $table->string('important_note')->nullable();
+            $table->text('discription')->nullable();
             $table->timestamps();
         });
     }

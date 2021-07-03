@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/login', 'AdminController@loginAdmin');
+Route::post('/login', 'AdminController@postloginAdmin');
+
 
 Route::get('/adminhome', function () {
     return view('admin.home');
@@ -50,3 +50,6 @@ Route::prefix('vaccines')->group(function () {
         'uses' => 'VaccineController@delete'
     ]);
 });
+
+
+

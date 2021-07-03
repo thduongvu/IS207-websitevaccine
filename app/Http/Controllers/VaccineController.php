@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Traits\StorageImageTrait;
 use App\Vaccine;
 use Illuminate\Http\Request;
 use App\Components\Recusive;
+use Storage;
 
 class VaccineController extends Controller
 {
+    use StorageImageTrait;
     private $vaccine;
 
     public function __construct(Vaccine $vaccine)
@@ -32,7 +35,6 @@ class VaccineController extends Controller
         $this->vaccine->create([
             'vaccine_name' => $request->name,
             'idparent' => $request->parent_id,
-            'status' => str_slug($request->name)
         ]);
         return redirect() -> route('vaccines.index');
     }
@@ -54,11 +56,20 @@ class VaccineController extends Controller
 
     public function update($id, Request $request)
     {
-        $this->vaccine->find($id)->update([
+        $dataVaccine = [
             'vaccine_name' => $request->name,
             'idparent' => $request->parent_id,
-            'status' => str_slug($request->name)
-        ]);
+            'status' => $request->status,
+            'amount' => $request->amount,
+            'important_note' => $request->important_note,
+            'discription' => $request->discription
+        ];
+
+        $dataUpload = $this->storageTraitUpload($request, 'image', 'vaccine_photo');
+        if(!empty($dataUpload)){
+            $dataVaccine['image'] = $dataUpload['file_path'];
+        }
+        $this->vaccine->find($id)->update($dataVaccine);
         return redirect() -> route('vaccines.index');
     }
 
