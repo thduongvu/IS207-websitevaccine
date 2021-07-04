@@ -15,3 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','HomeController@index');
 Route::get('/test','HomeController@test');
+Route::get('/extension','HomeController@extension');
+Route::get('/childcalendar','HomeController@childcalendar');
+Route::get('/adultcalendar','HomeController@adultcalendar');
+Route::get('/vaccinelist','HomeController@vaccinelist');
+
+
+
+
+

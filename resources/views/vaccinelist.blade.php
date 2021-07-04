@@ -1,11 +1,8 @@
 @extends('layouts.master')
 
 @section('title')
-    <title>test page</title>
+    <title>Thông tin chi tiết vắc xin</title>
 @endsection
 
 @section('content')
-
-    content
-
 @endsection
