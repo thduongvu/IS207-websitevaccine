@@ -13,13 +13,16 @@ class HomeController extends Controller
         $vaccines = VaccineCategory::where('idparent', 0)->get();
         $doctors = Doctor::latest()->get();
         $vaccines_1 = VaccineCategory::where('idparent', '>', 0)->latest()->take(4)->get();
-        return view('home.home', compact('vaccines','vaccines_1','doctors'));
+        $vaccines_rcm = VaccineCategory::where('idparent', '>', 0)->latest('views_count', 'desc')->take(8)->get();
+        //dd($vaccines_rcm);
+        return view('home.home', compact('vaccines','vaccines_1','doctors','vaccines_rcm'));
 
     }
 
     public function test()
     {
-        return view('test');
+        $vaccines = VaccineCategory::where('idparent', 0)->get();
+        return view('test',compact('vaccines'));
     }
 
     public function extension()
@@ -38,7 +41,11 @@ class HomeController extends Controller
     }
     public function vaccinelist()
     {
-        return view('vaccinelist');
+        $vaccines = VaccineCategory::where('idparent', 0)->get();
+        $vaccines_full = VaccineCategory::where('idparent', '>', 0)->get();
+
+        return view('vaccinelist.vaccinelist',compact('vaccines_full','vaccines'));
     }
+
 
 }
