@@ -15,14 +15,14 @@
                             <div class="product-image-wrapper">
                                 <div class="single-products">
                                     <div class="productinfo text-center">
-                                        <img src="{{$vaccines_rcm_item->image}}" alt="" />
+                                        <img src="{{$vaccines_rcm_item->image}}" alt=""/>
                                         <h4>{{$vaccines_rcm_item -> vaccine_name}}</h4>
                                         <p>{{$vaccines_rcm_item -> status}}</p>
-                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-info-circle"></i>Chi tiết</a>
+                                        <a href="#" class="btn btn-default add-to-cart"><i
+                                                class="fa fa-info-circle"></i>Chi tiết</a>
                                     </div>
                                 </div>
-                                <img src="/eshopper/images/home/hot.png" class="new" alt="" />
-
+                                <img src="/eshopper/images/home/hot.png" class="new" alt=""/>
                             </div>
                         </div>
                         @if($rcm_key % 8 == 7)
@@ -37,8 +37,9 @@
         <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
             <i class="fa fa-angle-right"></i>
         </a>
-
+    </div>
     </div>
 </div>
+
 
 

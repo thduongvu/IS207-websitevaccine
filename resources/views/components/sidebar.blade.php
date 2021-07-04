@@ -1,4 +1,4 @@
-        <div class="col-sm-5">
+<div class="col-sm-5">
     <div class="left-sidebar">
         <h2>DANH mục CÁC LOẠI VẮC XIN</h2>
         <div class="panel-group category-products" id="accordian"><!--category-productsr-->
@@ -40,7 +40,5 @@
                 <div class="shipping text-center">
             <img src="/eshopper/images/home/IMG_5682-2.jpg" alt="" />
         </div>/shipping-->
-
     </div>
-        </div>
-
+</div>

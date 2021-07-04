@@ -8,13 +8,15 @@
     <hr>
     <div class="container">
         <div class="row">
-            @include('components.sidebar')
+        @include('components.sidebar')
 
-            <!--features_items_vaccine-->
-            @include('vaccinelist.components.vaccinefull')
-            <!--features_items_vaccine-->
+        <!--features_items_vaccine-->
+        @include('vaccinelist.components.vaccinefull')
+        <!--features_items_vaccine-->
 
         </div>
     </div>
     <hr>
 @endsection
+
+

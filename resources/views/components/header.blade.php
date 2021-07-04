@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="col-md-4 clearfix">
                     <div class="logo pull-left">
-                        <a href="index.html"><img src="/eshopper/images/home/pv_gray.png" alt="" /></a>
+                        <a href="http://localhost:8000"><img src="/eshopper/images/home/pv_gray.png" alt="" /></a>
                     </div>
                 </div>
                 <div class="col-md-8 clearfix">
@@ -58,30 +58,30 @@
                     </div>
                     <div class="mainmenu pull-left">
                         <ul class="nav navbar-nav collapse navbar-collapse">
-                            <li><a href="index.html" class="active">Home</a></li>
-                            <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
+                            <li><a href="http://localhost:8000" class="active">Trang chủ</a></li>
+                            <li class="dropdown"><a href="#">Truy cập<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="shop.html">Products</a></li>
-                                    <li><a href="product-details.html">Product Details</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
-                                    <li><a href="cart.html">Cart</a></li>
-                                    <li><a href="login.html">Login</a></li>
+                                    <li><a href="http://localhost:8000/vaccinelist">Danh sách vắc xin</a></li>
+                                    <li><a href="http://localhost:8000/childcalendar">Lịch tiêm chủng trẻ em</a></li>
+                                    <li><a href="localhost:8000/adultcalendar">Lịch tiêm chủng người lớn</a></li>
+                                    <li><a href="cart.html">Đăng ký lịch hẹn tiêm chủng</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
+                            <li class="dropdown"><a href="#">Tin tức<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="blog.html">Blog List</a></li>
-                                    <li><a href="blog-single.html">Blog Single</a></li>
+                                    <li><a href="blog.html">Những điều cần biết trước khi tiêm</a></li>
+                                    <li><a href="blog-single.html">Những điều cần biết sau khi tiêm</a></li>
+                                    <li><a href="blog-single.html">Thông tin về vắc xin COVID-19</a></li>
                                 </ul>
                             </li>
-                            <li><a href="404.html">404</a></li>
-                            <li><a href="contact-us.html">Contact</a></li>
+                            <li><a href="404.html">Báo cáo phản hồi sau tiêm</a></li>
+                            <li><a href="http://localhost:8000/test">Hướng dẫn sử dụng</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="search_box pull-right">
-                        <input type="text" placeholder="Search"/>
+                        <input type="text" placeholder="Tìm kiếm"/>
                     </div>
                 </div>
             </div>
