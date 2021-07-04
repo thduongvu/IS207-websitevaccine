@@ -23,7 +23,8 @@ class HomeController extends Controller
     public function test()
     {
         $vaccines = VaccineCategory::where('idparent', 0)->get();
-        $vaccines_full = VaccineCategory::where('idparent', '>', 0)->latest('vaccine_name')->get();
+        $vaccines_full = VaccineCategory::where('idparent', '>', 0)->paginate(12);
+            //->latest('vaccine_name')->get();
         return view('test',compact('vaccines','vaccines_full'));
     }
 
@@ -49,5 +50,12 @@ class HomeController extends Controller
         return view('vaccinelist.vaccinelist',compact('vaccines_full','vaccines'));
     }
 
+    public function vaccinetype()
+    {
+        $vaccines = VaccineCategory::where('idparent', 0)->get();
+        $vaccines_full = VaccineCategory::where('idparent', '>', 0)->paginate(12);
+        //->latest('vaccine_name')->get();
+        return view('test',compact('vaccines','vaccines_full'));
+    }
 
 }

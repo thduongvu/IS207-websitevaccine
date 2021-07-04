@@ -20,6 +20,8 @@ Route::get('/childcalendar','HomeController@childcalendar');
 Route::get('/adultcalendar','HomeController@adultcalendar');
 
 Route::get('/vaccinelist','HomeController@vaccinelist');
+Route::get('/vaccinetype','HomeController@vaccinetype');
+
 
 
 

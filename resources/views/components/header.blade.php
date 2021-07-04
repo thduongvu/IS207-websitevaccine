@@ -61,9 +61,10 @@
                             <li><a href="http://localhost:8000" class="active">Trang chủ</a></li>
                             <li class="dropdown"><a href="#">Truy cập<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="http://localhost:8000/vaccinelist">Danh sách vắc xin</a></li>
+                                    <li><a href="http://localhost:8000/vaccinelist">Danh mục vắc xin</a></li>
+                                    <li><a href="http://localhost:8000/vaccinetype">Thông tin vắc xin</a></li>
                                     <li><a href="http://localhost:8000/childcalendar">Lịch tiêm chủng trẻ em</a></li>
-                                    <li><a href="localhost:8000/adultcalendar">Lịch tiêm chủng người lớn</a></li>
+                                    <li><a href="http://localhost:8000/adultcalendar">Lịch tiêm chủng người lớn</a></li>
                                     <li><a href="cart.html">Đăng ký lịch hẹn tiêm chủng</a></li>
                                 </ul>
                             </li>

@@ -1,4 +1,4 @@
-<div class="col-sm-5">
+<div class="col-sm-12">
     <div class="left-sidebar">
         <h2>DANH mục CÁC LOẠI VẮC XIN</h2>
         <div class="panel-group category-products" id="accordian"><!--category-productsr-->
