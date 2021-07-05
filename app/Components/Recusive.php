@@ -47,6 +47,8 @@ class Recusive
         foreach ($this->data as $value){
             if($value['idparent'] == $id){
                 $htmlTd .= "<tr><td>" . $value['vaccine_name'] . "</td>
+                                 <td> ".$value['status']."</td>
+                                 <td> ".$value['amount']."</td>
                                  <td><a href='http://localhost:8000/vaccines/edit/".$value['id']."' class='btn btn-default'>Edit</a>
                                      <a href='http://localhost:8000/vaccines/delete/".$value['id']."' class='btn btn-danger'>Delete</a></td>
                             </tr>";

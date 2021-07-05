@@ -18,7 +18,6 @@
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
-    @include('admin.partials.header')
     @include('admin.partials.sidebar')
 
     @yield('content')

@@ -26,6 +26,8 @@
                                 <th scope="col">Vắc-xin phòng bệnh</th>
                                 <th scope="col">Tên Vắc-xin</th>
                                 <th scope="col">Trạng thái</th>
+                                <th scope="col">Số lượng</th>
+                                <th scope="col"></th>
                             </tr>
                             </thead>
                             <tbody>

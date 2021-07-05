@@ -51,5 +51,52 @@ Route::prefix('vaccines')->group(function () {
     ]);
 });
 
+Route::prefix('slider')->group(function () {
+    Route::get('/', [
+        'as' => 'slider.index',
+        'uses' => 'AdminSliderController@index'
+    ]);
+
+    Route::get('/create', [
+        'as' => 'slider.create',
+        'uses' => 'AdminSliderController@create'
+    ]);
+
+    Route::post('/store', [
+        'as' => 'slider.store',
+        'uses' => 'AdminSliderController@store'
+    ]);
+    Route::get('/edit/{id}', [
+        'as' => 'slider.edit',
+        'uses' => 'AdminSliderController@edit'
+    ]);
+
+    Route::post('/update/{id}', [
+        'as' => 'slider.update',
+        'uses' => 'AdminSliderController@update'
+    ]);
+});
+
+Route::prefix('immunizer')->group(function () {
+    Route::get('/', [
+        'as' => 'immunizer.index',
+        'uses' => 'AdminImmunizerController@index'
+    ]);
+    Route::get('/search', [
+        'as' => 'immunizer.search',
+        'uses' => 'AdminImmunizerController@search'
+    ]);
+});
+
+Route::prefix('appointment')->group(function () {
+    Route::get('/', [
+        'as' => 'appointment.index',
+        'uses' => 'AdminAppoinmentController@index'
+    ]);
+    Route::get('/search', [
+        'as' => 'appointment.search',
+        'uses' => 'AdminAppoinmentController@search'
+    ]);
+});
 
 

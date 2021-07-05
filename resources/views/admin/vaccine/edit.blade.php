@@ -19,7 +19,7 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-    @include('admin.partials.content-header', ['name' => 'Category', 'key' => 'Edit'] )
+    @include('admin.partials.content-header', ['name' => 'Vaccines', 'key' => 'Edit'] )
     <!-- /.content-header -->
 
         <!-- Main content -->
