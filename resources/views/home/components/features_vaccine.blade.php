@@ -8,7 +8,7 @@
             <div class="product-image-wrapper">
                 <div class="single-products">
                     <div class="productinfo text-center">
-                        <img src="{{$vaccine->image}}" alt="" />
+                        <img width="203px" height="135px" src="{{$vaccine->image}}" alt="" />
                         <h4>{{$vaccine -> vaccine_name}}</h4>
                         <p>{{$vaccine -> status}}</p>
                         <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-info-circle"></i>Chi tiết</a>

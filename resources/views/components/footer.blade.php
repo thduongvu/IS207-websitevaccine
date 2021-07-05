@@ -7,9 +7,10 @@
                     <div class="single-widget">
                         <h2>TRUY CẬP</h2>
                         <ul class="nav nav-pills nav-stacked">
-                            <li><a href="http://localhost:8000/vaccinelist">Danh sách vắc xin</a></li>
-                            <li><a href="#">Lịch tiêm chủng trẻ em</a></li>
-                            <li><a href="#">Lịch tiêm chủng người lớn</a></li>
+                            <li><a href="http://localhost:8000/vaccinelist">Danh mục vắc xin</a></li>
+                            <li><a href="http://localhost:8000/vaccinetype">Danh mục vắc xin</a></li>
+                            <li><a href="http://localhost:8000/childcalendar">Lịch tiêm chủng trẻ em</a></li>
+                            <li><a href="http://localhost:8000/adultcalendar">Lịch tiêm chủng người lớn</a></li>
                             <li><a href="#">Cần biết trước khi tiêm</a></li>
                             <li><a href="#">Cần biết sau khi tiêm</a></li>
                         </ul>

@@ -15,16 +15,21 @@ $baseUrl= 'http://localhost:8000'
                                 <div class="product-image-wrapper">
                                     <div class="single-products">
                                         <div class="productinfo text-center">
-                                            <img src="{{$vaccines_rcm_item->image}}" alt="" />
+                                            <img width="203px" height="135px" src="{{$vaccines_rcm_item->image}}" alt="" />
                                             <h4>{{$vaccines_rcm_item -> vaccine_name}}</h4>
                                             <p>{{$vaccines_rcm_item -> status}}</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-info-circle"></i>Chi tiết</a>
                                         </div>
                                     </div>
                                     <img src="/eshopper/images/home/hot.png" class="new" alt="" />
-
+                                    <div class="choose">
+                                        <ul class="nav nav-pills nav-justified">
+                                            <li><a href="#"><i class="fa fa-plus-square"></i>Thêm vào danh sách yêu thích</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
+
                     @if($rcm_key % 4 == 3)
                         </div>
                     @endif

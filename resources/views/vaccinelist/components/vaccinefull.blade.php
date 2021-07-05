@@ -1,45 +1,47 @@
 @php
     $baseUrl= 'http://localhost:8000'
 @endphp
-<div class="recommended_items"><!--recommended_items-->
-    <h2 class="title text-center">Thông tin các loại vắc xin</h2>
 
-    <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
+@extends('layouts.master')
 
-            @foreach($vaccines_full as $rcm_key => $vaccines_rcm_item)
-                @if($rcm_key % 8 == 0)
-                    <div class="item {{$rcm_key == 0 ? 'active' : ''}}">
-                        @endif
-                        <div class="col-sm-5">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="{{$vaccines_rcm_item->image}}" alt=""/>
-                                        <h4>{{$vaccines_rcm_item -> vaccine_name}}</h4>
-                                        <p>{{$vaccines_rcm_item -> status}}</p>
-                                        <a href="#" class="btn btn-default add-to-cart"><i
-                                                class="fa fa-info-circle"></i>Chi tiết</a>
-                                    </div>
+@section('title')
+    <title>test page</title>
+@endsection
+
+@section('content')
+    <hr>
+
+    <div class="container">
+        <div class="col-sm-12 padding-right">
+
+            <div class="container">
+                <h2 class="title text-center">Tổng hợp các loại vắc xin</h2>
+                @foreach($vaccines_full as $vaccine)
+                    <div class="col-sm-3">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img width="203px" height="135px" src="{{$vaccine->image}}" alt=""/>
+                                    <h5>{{$vaccine -> vaccine_name}}</h5>
+                                    <p>{{$vaccine -> status}}</p>
+                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa" aria-hidden="true"></i>Chi tiết</a>
                                 </div>
-                                <img src="/eshopper/images/home/hot.png" class="new" alt=""/>
+                                <div class="choose">
+                                    <ul class="nav nav-pills nav-justified">
+                                        <li><a href="#"><i class="fa fa-plus-square"></i>Thêm vào danh sách yêu thích</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        @if($rcm_key % 8 == 7)
                     </div>
-                @endif
-            @endforeach
+                @endforeach
+
+            </div>
+
+            {{$vaccines_full->links()}}
 
         </div>
-        <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
-            <i class="fa fa-angle-left"></i>
-        </a>
-        <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
-            <i class="fa fa-angle-right"></i>
-        </a>
     </div>
-    </div>
-</div>
 
-
-
+    <hr>
+@endsection

@@ -4,8 +4,11 @@
     <title>Thông tin vắc xin | Danh sách</title>
 @endsection
 
+
+
 @section('content')
     <hr>
+
     <div class="container">
         <div class="row">
 

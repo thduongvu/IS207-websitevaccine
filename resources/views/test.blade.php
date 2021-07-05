@@ -25,7 +25,11 @@
                                 <p>{{$vaccine -> status}}</p>
                                 <a href="#" class="btn btn-default add-to-cart"><i class="fa" aria-hidden="true"></i>Chi tiết</a>
                             </div>
-
+                            <div class="choose">
+                                <ul class="nav nav-pills nav-justified">
+                                    <li><a href="#"><i class="fa fa-plus-square"></i>Thêm vào danh sách yêu thích</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
