@@ -30,7 +30,7 @@
                 <div class="product-image-wrapper">
                     <div class="single-products">
                         <div class="productinfo text-center">
-                            <img src="/eshopper/images/home/bb2.jpg" alt=""/>
+                            <img object-fit="contain" src="/eshopper/images/home/bb2.jpg" alt=""/>
                             <h5>Lịch tiêm chủng khuyến nghị</h5>
                             <p>Mọi lứa tuổi đều cần được chủng ngừa</p>
                             <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-newspaper-o"></i>Đọc tiếp ...</a>
@@ -73,7 +73,7 @@
                 <div class="product-image-wrapper">
                     <div class="single-products">
                         <div class="productinfo text-center">
-                            <img src="/eshopper/images/home/after1.png" alt=""/>
+                            <img object-fit="contain" src="/eshopper/images/home/after1.png" alt=""/>
                             <h5>Tác dụng phụ của vắc xin COVID-19</h5>
                             <p>Các dấu hiệu bất thường cần liên hệ trung tâm y tế</p>
                             <a href="#" class="btn btn-default add-to-cart"><i class="fa" aria-hidden="true"></i>Đọc tiếp ...</a>

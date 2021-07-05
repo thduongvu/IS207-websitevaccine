@@ -22,6 +22,12 @@ Route::get('/adultcalendar','HomeController@adultcalendar');
 Route::get('/vaccinelist','HomeController@vaccinelist');
 Route::get('/vaccinetype','HomeController@vaccinetype');
 
+Route::get('/vaccinefull','HomeController@vaccinefull');
+Route::get('vaccinefull/add-favo/{}id', 'HomeController@addtofavo')->name('addtofavo');
+
+
+Route::get('/choose','HomeController@choose');
+
 
 
 

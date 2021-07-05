@@ -9,10 +9,11 @@ var RGBChange = function () {
 };
 
 /*scroll to top*/
+var $j = jQuery.noConflict();
 
-$(document).ready(function () {
-    $(function () {
-        $.scrollUp({
+$j(document).ready(function () {
+    $j(function () {
+        $j.scrollUp({
             scrollName: 'scrollUp', // Element ID
             scrollDistance: 300, // Distance from top/bottom before showing element (px)
             scrollFrom: 'top', // 'top' or 'bottom'
