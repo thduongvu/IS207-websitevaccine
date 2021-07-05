@@ -34,8 +34,8 @@
                     <div class="shop-menu clearfix pull-right">
                         <ul class="nav navbar-nav">
                             <li><a href=""><i class="fa fa-user"></i> Thuỳ Dương</a></li>
-                            <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                            <li><a href="cart.html"><i class="fa fa-star"></i> Danh sách yêu thích</a></li>
+                            <li><a href="http://localhost:8000/vaccinestatus"><i class="fa fa-crosshairs"></i> Kiểm tra tình trạng vắc xin</a></li>
+                            <li><a href="http://localhost:8000/developing"><i class="fa fa-star"></i> Danh sách yêu thích</a></li>
                             <li><a href="login.html"><i class="fa fa-lock"></i> Đăng nhập</a></li>
                         </ul>
                     </div>
@@ -62,6 +62,7 @@
                             <li class="dropdown"><a href="#">Truy cập<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     <li><a href="http://localhost:8000/vaccinelist">Danh mục vắc xin</a></li>
+                                    <li><a href="http://localhost:8000/vaccinestatus">Tình trạng vắc xin</a></li>
                                     <li><a href="http://localhost:8000/vaccinetype">Thông tin vắc xin</a></li>
                                     <li><a href="http://localhost:8000/childcalendar">Lịch tiêm chủng trẻ em</a></li>
                                     <li><a href="http://localhost:8000/adultcalendar">Lịch tiêm chủng người lớn</a></li>
@@ -75,8 +76,8 @@
                                     <li><a href="blog-single.html">Thông tin về vắc xin COVID-19</a></li>
                                 </ul>
                             </li>
-                            <li><a href="404.html">Báo cáo phản hồi sau tiêm</a></li>
-                            <li><a href="http://localhost:8000/test">Hướng dẫn sử dụng</a></li>
+                            <li><a href="http://localhost:8000/developing">Báo cáo sau tiêm</a></li>
+                            <li><a href="http://localhost:8000/test">Hướng dẫn</a></li>
                         </ul>
                     </div>
                 </div>

@@ -8,39 +8,47 @@
     <title>test page</title>
 @endsection
 
+@section('css')
+@endsection
+
+@section('js')<!--/phan rieng-->
+@endsection
+
 @section('content')
     <hr>
-    <div class="container">
-    <div class="col-sm-12 padding-right">
-
+    <section id="form"><!--form-->
         <div class="container">
-            <h2 class="title text-center">Tổng hợp các loại vắc xin</h2>
-            @foreach($vaccines_full as $vaccine)
-                <div class="col-sm-3">
-                    <div class="product-image-wrapper">
-                        <div class="single-products">
-                            <div class="productinfo text-center">
-                                <img src="{{$vaccine->image}}" alt=""/>
-                                <h5>{{$vaccine -> vaccine_name}}</h5>
-                                <p>{{$vaccine -> status}}</p>
-                                <a href="#" class="btn btn-default add-to-cart"><i class="fa" aria-hidden="true"></i>Chi tiết</a>
-                            </div>
-                            <div class="choose">
-                                <ul class="nav nav-pills nav-justified">
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>Thêm vào danh sách yêu thích</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="col-sm-4 col-sm-offset-1">
+                    <div class="login-form"><!--login form-->
+                        <h2>Login to your account</h2>
+                        <form action="#">
+                            <input type="text" placeholder="Name" />
+                            <input type="email" placeholder="Email Address" />
+                            <span>
+								<input type="checkbox" class="checkbox">
+								Keep me signed in
+							</span>
+                            <button type="submit" class="btn btn-default">Login</button>
+                        </form>
+                    </div><!--/login form-->
                 </div>
-            @endforeach
-
+                <div class="col-sm-1">
+                    <h2 class="or">OR</h2>
+                </div>
+                <div class="col-sm-4">
+                    <div class="signup-form"><!--sign up form-->
+                        <h2>New User Signup!</h2>
+                        <form action="#">
+                            <input type="text" placeholder="Name"/>
+                            <input type="email" placeholder="Email Address"/>
+                            <input type="password" placeholder="Password"/>
+                            <button type="submit" class="btn btn-default">Signup</button>
+                        </form>
+                    </div><!--/sign up form-->
+                </div>
+            </div>
         </div>
-
-        {{$vaccines_full->links()}}
-
-    </div>
-    </div>
-
+    </section><!--/form-->
     <hr>
 @endsection

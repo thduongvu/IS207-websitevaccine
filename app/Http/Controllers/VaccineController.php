@@ -1,13 +1,22 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Vaccine;
+use App\Components\Recusive;
 use Illuminate\Http\Request;
 
 class VaccineController extends Controller
 {
-    public function index()
+    private $vaccine;
+    public function __construct(Vaccine $vaccine)
     {
-        dc('list category');
+        $this->vaccine = $vaccine;
+    }
+    public function tablevaccine()
+    {
+        $vaccines = $this->vaccine->all();
+        $recusive = new Recusive($vaccines);
+        $htmlTable = $recusive->categoryTable();
+        return view('vaccinelist.vaccinestatus', compact('htmlTable'));
     }
 }

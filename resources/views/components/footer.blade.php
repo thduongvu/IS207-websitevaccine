@@ -8,11 +8,12 @@
                         <h2>TRUY CẬP</h2>
                         <ul class="nav nav-pills nav-stacked">
                             <li><a href="http://localhost:8000/vaccinelist">Danh mục vắc xin</a></li>
-                            <li><a href="http://localhost:8000/vaccinetype">Danh mục vắc xin</a></li>
+                            <li><a href="http://localhost:8000/vaccinestatus">Tình trạng vắc xin</a></li>
+                            <li><a href="http://localhost:8000/vaccinetype">Thông tin vắc xin</a></li>
                             <li><a href="http://localhost:8000/childcalendar">Lịch tiêm chủng trẻ em</a></li>
                             <li><a href="http://localhost:8000/adultcalendar">Lịch tiêm chủng người lớn</a></li>
-                            <li><a href="#">Cần biết trước khi tiêm</a></li>
-                            <li><a href="#">Cần biết sau khi tiêm</a></li>
+                            <li><a href="http://localhost:8000/developing">Cần biết trước khi tiêm</a></li>
+                            <li><a href="http://localhost:8000/developing">Cần biết sau khi tiêm</a></li>
                         </ul>
                     </div>
                 </div>
@@ -20,11 +21,11 @@
                     <div class="single-widget">
                         <h2>Mở rộng</h2>
                         <ul class="nav nav-pills nav-stacked">
-                            <li><a href="#">Đội ngũ bác sĩ</a></li>
-                            <li><a href="#">Đặt lịch hẹn tiêm chủng</a></li>
-                            <li><a href="#">Khai báo y tế</a></li>
-                            <li><a href="#">Phản hồi sau tiêm chủng</a></li>
-                            <li><a href="#">Hướng dẫn sử dụng</a></li>
+                            <li><a href="http://localhost:8000/developing">Đội ngũ bác sĩ</a></li>
+                            <li><a href="http://localhost:8000/developing">Đặt lịch hẹn tiêm chủng</a></li>
+                            <li><a href="http://localhost:8000/developing">Khai báo y tế</a></li>
+                            <li><a href="http://localhost:8000/developing">Phản hồi sau tiêm chủng</a></li>
+                            <li><a href="http://localhost:8000/developing">Hướng dẫn sử dụng</a></li>
                         </ul>
                     </div>
                 </div>
@@ -32,9 +33,9 @@
                     <div class="single-widget">
                         <h2>Về đề tài</h2>
                         <ul class="nav nav-pills nav-stacked">
-                            <li><a href="#">Lời cảm ơn</a></li>
-                            <li><a href="#">Lí do thực hiện</a></li>
-                            <li><a href="#">Về người thực hiện</a></li>
+                            <li><a href="http://localhost:8000/developing">Lời cảm ơn</a></li>
+                            <li><a href="http://localhost:8000/developing">Lí do thực hiện</a></li>
+                            <li><a href="http://localhost:8000/developing">Về người thực hiện</a></li>
                             <li><a href="https://github.com/thduongvu/IS207-websitevaccine.git">Github</a></li>
                             <li><a href="https://drive.google.com/drive/folders/1t04UvrtzX8rqlUvyJPt_zUeOsiEXt5Hp?usp=sharing">Google Drive</a></li>
                         </ul>

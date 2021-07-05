@@ -8,8 +8,7 @@
     <hr>
     <div class="container">
         <div class="row">
-            @include('components.sidebar')
-
+xin loi trang web dang duoc phat trien
         </div>
     </div>
     <hr>

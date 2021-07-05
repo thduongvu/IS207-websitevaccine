@@ -22,11 +22,18 @@ class HomeController extends Controller
 
     public function test()
     {
+
+        return view('test');
+    }
+
+    public function test1()
+    {
         $vaccines = VaccineCategory::where('idparent', 0)->get();
         $vaccines_full = VaccineCategory::where('idparent', '>', 0)->paginate(12);
-            //->latest('vaccine_name')->get();
-        return view('test',compact('vaccines','vaccines_full'));
+        //->latest('vaccine_name')->get();
+        return view('test1',compact('vaccines','vaccines_full'));
     }
+
 
     public function extension()
     {
@@ -42,7 +49,7 @@ class HomeController extends Controller
     {
         return view('adultcalendar');
     }
-    public function vaccinelist()
+    public function vaccinelist1()
     {
         $vaccines = VaccineCategory::where('idparent', 0)->get();
         $vaccines_full = VaccineCategory::where('idparent', '>', 0)->get();
@@ -53,7 +60,7 @@ class HomeController extends Controller
     public function vaccinetype()
     {
         $vaccines = VaccineCategory::where('idparent', 0)->get();
-        $vaccines_full = VaccineCategory::where('idparent', '>', 0)->paginate(12);
+        $vaccines_full = VaccineCategory::where('idparent', '>', 0)->latest('vaccine_name')->paginate(12);
         //->latest('vaccine_name')->get();
         return view('vaccinelist.vaccinetype',compact('vaccines','vaccines_full'));
     }
@@ -65,6 +72,22 @@ class HomeController extends Controller
         return view('vaccinelist.components.vaccinefull',compact('vaccines_full'));
     }
 
+    public function detailvaccine($id)
+    {
+        $full_item = VaccineCategory::where('idparent', '>', 0)->latest()->take(20)->get();
+        $details = VaccineCategory::where('id', $id)->get();
+        return view('vaccinelist.detailvaccine',compact('full_item','details'));
+
+    }
+
+    public function vaccinelist()
+    {
+        $vaccines = VaccineCategory::where('idparent', 0)->get();
+        $vaccines_full = VaccineCategory::where('idparent', '>', 0)->get();
+
+        return view('vaccinelist.vaccinelist',compact('vaccines_full','vaccines'));
+    }
+
     public function addtofavo($id)
     {
        dd('add to favo------'.$id);
@@ -73,6 +96,11 @@ class HomeController extends Controller
     public function choose()
     {
         return view('choose.choose');
+    }
+
+    public function developing()
+    {
+        return view('error.developing');
     }
 
 }
