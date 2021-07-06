@@ -1,4 +1,3 @@
-
 <!-- Main Footer -->
 <footer class="main-footer">
     <!-- To the right -->
@@ -6,5 +5,9 @@
         Anything you want
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2021
+        <a href="https://www.facebook.com/thduongvu1809/">Thuỳ Dương </a>
+        &
+        <a href="https://www.facebook.com/thaitamphan123"> Thái Tâm</a>.</strong>
+    All rights reserved.
 </footer>

@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Appoinment;
 use App\Doctor;
 use App\Immunizier;
 use App\Slider;
 use App\Useraccount;
 use App\VaccineCategory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Auth;
@@ -17,7 +19,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $sliders = Slider::latest()->get();
+        $sliders = Slider::latest()->take(7)->get();
         $vaccines = VaccineCategory::where('idparent', 0)->get();
         $doctors = Doctor::latest()->get();
         $vaccines_1 = VaccineCategory::where('idparent', '>', 0)->latest()->take(4)->get(); // new
@@ -26,6 +28,48 @@ class HomeController extends Controller
         //dd($vaccines_rcm);
         return view('home.home', compact('vaccines', 'vaccines_1', 'doctors', 'vaccines_rcm', 'sliders'));
 
+    }
+
+    public function dangky()
+    {
+
+        return view('dangky');
+    }
+
+    public function postdangky(Request $req)
+    {
+        $validatedData = $req->validate([
+            'fullname' => 'required',
+            'appoinment_date' => 'required',
+            'appoinment_time' => 'required',
+        ]);
+
+        $ap = new Appoinment();
+
+        $ap->fullname = $req->fullname;
+        $ap->appoinment_date = $req->appoinment_date;
+        $ap->appoinment_time = $req->appoinment_time;
+        $ap->save();
+
+        return redirect()->back()->with('success', 'Da dang ky thanh cong');
+    }
+
+
+    public function bs1()
+    {
+        return view('others.bs1');
+    }
+    public function bs2()
+    {
+        return view('others.bs2');
+    }
+    public function bs3()
+    {
+        return view('others.bs3');
+    }
+    public function bs6()
+    {
+        return view('others.bs6');
     }
 
     public function test()
@@ -141,6 +185,7 @@ class HomeController extends Controller
 
     }
 
+
     public function vaccinelist()
     {
         $vaccines = VaccineCategory::where('idparent', 0)->get();
@@ -183,6 +228,23 @@ class HomeController extends Controller
 
         Mail::send('mail', $data, function ($message) use ($to_name, $to_email) {
             $message->to($to_email)->subject('[PV Vaccination] - Đăng ký lịch tiêm chủng');//send this mail with subject
+            $message->from($to_email, $to_name);//send from this mail
+        });
+        return redirect('/')->with('message','');
+        //--send mail
+
+    }
+
+    public function send_report()
+    {
+        //send mail
+        $to_name = "PV Vaccination Sys.";
+        $to_email = Immunizier::query()->where('id',2)->first()->mail;
+
+        $data = array("name" => "PV Vaccination Sys.", "body" => "Lưu ý: Đây là email xác nhận tự động từ hệ thống. Vui lòng không trả lời email này."); //body of mail.blade.php
+
+        Mail::send('report', $data, function ($message) use ($to_name, $to_email) {
+            $message->to($to_email)->subject('[PV Vaccination] - Xác nhận báo cáo sốc phản vệ');//send this mail with subject
             $message->from($to_email, $to_name);//send from this mail
         });
         return redirect('/')->with('message','');

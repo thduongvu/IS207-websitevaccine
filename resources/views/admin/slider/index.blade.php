@@ -37,7 +37,7 @@
                                 @foreach($sliders as $slider)
                                     <tr>
                                         <th scope="row">{{$slider->id}}</th>
-                                        <td>{{$slider->name}}</td>
+                                        <td>{{$slider->title}}</td>
                                         <td>{{$slider->description}}</td>
                                         <td><img class="image_slider" src="{{$slider->image_path}}" alt=""></td>
                                         <td>
