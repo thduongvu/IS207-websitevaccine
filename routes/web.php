@@ -45,6 +45,10 @@ Route::get('/developing','HomeController@developing');
 
 Route::get('/search','HomeController@search');
 
+// send mail
+Route::get('/send-mail','HomeController@send_mail');
+
+
 
 
 
