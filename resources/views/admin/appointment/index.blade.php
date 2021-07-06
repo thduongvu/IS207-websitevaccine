@@ -5,7 +5,7 @@
 @endsection
 
 @section('css')
-    <link rel="stylesheet" href="{{asset('backend/Immunizer/add.css')}}">
+    <link rel="stylesheet" href="{{asset('backend/immunizier/add.css')}}">
 @endsection
 
 @section('content')

@@ -5,14 +5,14 @@
 @endsection
 
 @section('css')
-    <link rel="stylesheet" href="{{asset('backend/Immunizer/add.css')}}">
+    <link rel="stylesheet" href="{{asset('backend/immunizier/add.css')}}">
 @endsection
 
 @section('content')
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-    @include('admin.partials.content-header', ['name' => 'Immunizer', 'key' => 'List'])
+    @include('admin.partials.content-header', ['name' => 'immunizier', 'key' => 'List'])
     <!-- /.content-header -->
 
         <!-- Main content -->
@@ -21,7 +21,7 @@
                 <div class="row">
                     <!-- SEARCH FORM -->
                     <div class="col-md-12">
-                    <form action="{{route('immunizer.search')}}" method="get" class="form-search float-right m-2">
+                    <form action="{{route('immunizier.search')}}" method="get" class="form-search float-right m-2">
                         @csrf
                         <div class="form-group">
                             <input type="text" class="form-control"
@@ -44,13 +44,13 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($immunizers as $immunizer)
+                            @foreach($immuniziers as $immunizier)
                                 <tr>
-                                    <th scope="row">{{$immunizer->id}}</th>
-                                    <td>{{$immunizer->fullname}}</td>
-                                    <td>{{$immunizer->dob}}</td>
-                                    <td>{{$immunizer->sex}}</td>
-                                    <td>{{$immunizer->phone}}</td>
+                                    <th scope="row">{{$immunizier->id}}</th>
+                                    <td>{{$immunizier->fullname}}</td>
+                                    <td>{{$immunizier->dob}}</td>
+                                    <td>{{$immunizier->sex}}</td>
+                                    <td>{{$immunizier->phone}}</td>
                                 </tr>
                             @endforeach
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Appoinment;
 use App\Doctor;
 use App\Immunizier;
+use App\Report;
 use App\Slider;
 use App\Useraccount;
 use App\VaccineCategory;
@@ -114,6 +115,8 @@ class HomeController extends Controller
 
         return redirect()->back()->with('success', 'Tài khoản đã được tạo thành công');
     }
+
+
 
     public function postlogin(Request $req)
     {
@@ -254,6 +257,24 @@ class HomeController extends Controller
         return redirect('/')->with('message','');
         //--send mail
 
+    }
+
+    public function postreport(Request $req)
+    {
+        $validatedData = $req->validate([
+            'email' => 'nullable| email',
+            'name' => 'required',
+            'contents' => 'required',
+        ]);
+
+        $rp = new Report();
+        $rp->name = $req->name;
+        $rp->email = $req->email;
+        $rp->contents = $req->contents;
+
+        $rp->save();
+
+        return redirect()->back()->with('success', 'Báo cáo đã được gửi đến hệ thống thành công');
     }
 
 }

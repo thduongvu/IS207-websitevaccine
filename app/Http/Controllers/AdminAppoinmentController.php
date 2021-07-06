@@ -22,4 +22,10 @@ class AdminAppoinmentController extends Controller
             ->get();
         return view('admin.appointment.index',compact('appoinments'));
     }
+
+    public function search(Request $request)
+    {
+        $appointment = DB::table('appoinments')->where('immuniziers.fullname','like', '%'.$request->key.'%')->get();
+        return view('admin.appointment.index', compact('appointment'));
+    }
 }
