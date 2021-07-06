@@ -24,7 +24,7 @@
 
                 <li class="nav-item">
                     <a href="{{route('vaccines.index')}}" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="nav-icon fas fa-syringe"></i>
                         <p>
                             Vaccines
                         </p>
@@ -33,7 +33,7 @@
 
                 <li class="nav-item">
                     <a href="{{route('slider.index')}}" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="nav-icon fas fa-sliders-h"></i>
                         <p>
                             Slider
                         </p>
@@ -42,7 +42,7 @@
 
                 <li class="nav-item">
                     <a href="{{route('immunizer.index')}}" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="nav-icon fas fa-user-friends"></i>
                         <p>
                             Immunizer
                         </p>
@@ -51,7 +51,7 @@
 
                 <li class="nav-item">
                     <a href="{{route('appointment.index')}}" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="nav-icon fas fa-calendar-times"></i>
                         <p>
                             Appointment
                         </p>
