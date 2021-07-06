@@ -18,11 +18,19 @@ Route::get('/test','HomeController@test')->name('test');
 
 Route::get('/test1','HomeController@test1');
 //Route::get('/chi-tiet-vac-xin/{id}','HomeController@test');
+Route::get('/bs1','HomeController@bs1');
+Route::get('/bs2','HomeController@bs2');
+Route::get('/bs3','HomeController@bs3');
+Route::get('/bs6','HomeController@bs6');
+
 
 Route::post('/posttest',  'HomeController@posttest')->name('posttest');
 
 Route::post('/postlogin',  'HomeController@postlogin')->name('postlogin');
 
+Route::get('/dangky','HomeController@dangky');
+
+Route::post('/postdangky','HomeController@postdangky')->name('postdangky');
 
 Route::get('/extension','HomeController@extension');
 Route::get('/childcalendar','HomeController@childcalendar');
@@ -47,6 +55,9 @@ Route::get('/search','HomeController@search');
 
 // send mail
 Route::get('/send-mail','HomeController@send_mail');
+
+Route::get('/send-report','HomeController@send_report');
+
 
 //admin
 Route::get('/login', 'AdminController@loginAdmin');

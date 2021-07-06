@@ -34,7 +34,7 @@
                     <div class="shop-menu clearfix pull-right">
                         <ul class="nav navbar-nav">
                             <li><a href="http://localhost:8000/vaccinestatus"><i class="fa fa-crosshairs"></i> Kiểm tra tình trạng vắc xin</a></li>
-                            <li><a href="http://localhost:8000/developing"><i class="fa fa-star"></i> Đăng ký lịch hẹn</a></li>
+                            <li><a href="http://localhost:8000/test1"><i class="fa fa-star"></i> Đăng ký lịch hẹn</a></li>
                             <li><a href="http://localhost:8000/test"><i class="fa fa-lock"></i> Đăng nhập</a></li>
                         </ul>
                     </div>

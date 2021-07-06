@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="vaccination@localhost" uuid="e178eff2-13df-4f8a-a8e0-b569da83ce69">
+    <data-source source="LOCAL" name="vaccination@localhost" uuid="a666bd5b-b968-4597-be0f-101019bbf2c9">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/vaccination</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>

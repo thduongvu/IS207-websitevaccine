@@ -17,7 +17,7 @@ class AdminSliderController extends Controller
     }
 
     public function index(){
-        $sliders = $this->slider->paginate(5);
+        $sliders = $this->slider->all();
         return view('admin.slider.index',compact('sliders'));
     }
 
