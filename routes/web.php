@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +13,47 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','HomeController@index');
+Route::get('/test','HomeController@test')->name('test');
+
+Route::get('/test1','HomeController@test1');
+//Route::get('/chi-tiet-vac-xin/{id}','HomeController@test');
+
+Route::post('/posttest',  'HomeController@posttest')->name('posttest');
+
+Route::post('/postlogin',  'HomeController@postlogin')->name('postlogin');
+
+
+Route::get('/extension','HomeController@extension');
+Route::get('/childcalendar','HomeController@childcalendar');
+Route::get('/adultcalendar','HomeController@adultcalendar');
+
+Route::get('/vaccinelist','HomeController@vaccinelist')->name('vaccinelist');;
+Route::get('/vaccinestatus','VaccineController@tablevaccine');
+
+Route::get('/vaccinetype','HomeController@vaccinetype');
+Route::get('/chi-tiet-vac-xin/{id}','HomeController@detailvaccine');
+
+
+Route::get('/vaccinefull','HomeController@vaccinefull');
+
+Route::get('vaccinefull/add-favo/{id}', 'HomeController@addtofavo')->name('addtofavo');
+
+Route::get('/choose','HomeController@choose');
+
+Route::get('/developing','HomeController@developing');
+
+Route::get('/search','HomeController@search');
+
+// send mail
+Route::get('/send-mail','HomeController@send_mail');
+
+
+
+
+
+
+
+
+
+
