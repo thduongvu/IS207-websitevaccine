@@ -53,9 +53,10 @@ Route::get('/login', 'AdminController@loginAdmin');
 Route::post('/login', 'AdminController@postloginAdmin');
 
 
-Route::get('/adminhome', function () {
-    return view('admin.home');
-});
+Route::get('/adminhome', [
+    'as' => 'adminhome.index',
+    'uses' => 'AdminHomeController@index'
+]);
 
 Route::prefix('vaccines')->group(function () {
     Route::get('/', [
@@ -137,6 +138,31 @@ Route::prefix('appointment')->group(function () {
     ]);
 });
 
+Route::prefix('news')->group(function () {
+    Route::get('/', [
+        'as' => 'news.index',
+        'uses' => 'AdminNewsController@index'
+    ]);
+
+    Route::get('/create', [
+        'as' => 'news.create',
+        'uses' => 'AdminNewsController@create'
+    ]);
+
+    Route::post('/store', [
+        'as' => 'news.store',
+        'uses' => 'AdminNewsController@store'
+    ]);
+    Route::get('/edit/{id}', [
+        'as' => 'news.edit',
+        'uses' => 'AdminNewsController@edit'
+    ]);
+
+    Route::post('/update/{id}', [
+        'as' => 'news.update',
+        'uses' => 'AdminNewsController@update'
+    ]);
+});
 
 
 

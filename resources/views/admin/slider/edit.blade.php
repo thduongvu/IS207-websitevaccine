@@ -20,13 +20,11 @@
                         @csrf
                         <div class="form-group">
                             <label >Tên slider</label>
-                            <input type="text" class="form-control @error('name') is-invalid @enderror"
-                                   name="name"
+                            <input type="text" class="form-control "
+                                   name="title"
                                    value="{{$slider->name}}"
                                    placeholder="Nhập tên ">
-                            @error('name')
-                            <div class="alert alert-danger">{{$message}}</div>
-                            @enderror
+
                         </div>
 
                         <div class="form-group">

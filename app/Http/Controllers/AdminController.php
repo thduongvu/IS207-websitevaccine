@@ -21,7 +21,6 @@ class AdminController extends Controller
         $admin_password = $request->password;
 
         $result = DB::table('admins')->where('username', $admin_username)->where('password', $admin_password)->first();
-
         if($result) {
             return Redirect::to('adminhome');
         }else

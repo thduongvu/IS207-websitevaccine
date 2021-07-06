@@ -12,7 +12,7 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-    @include('admin.partials.content-header', ['name' => 'Slider', 'key' => 'List'])
+    @include('admin.partials.content-header', ['name' => 'News', 'key' => 'List'])
     <!-- /.content-header -->
 
         <!-- Main content -->
@@ -20,34 +20,34 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="{{route('slider.create')}}" class="btn btn-success float-right m-2">Add</a>
+                        <a href="{{route('news.create')}}" class="btn btn-success float-right m-2">Add</a>
                     </div>
                     <div class="col-md-12">
                         <table class="table table-bordered">
                             <thead>
                             <tr>
                                 <th scope="col">STT</th>
-                                <th scope="col">Tên slider</th>
-                                <th scope="col">Description</th>
+                                <th scope="col">Tên bài báo</th>
+                                <th scope="col">Ghi chú</th>
                                 <th scope="col">Hình ảnh</th>
                                 <th scope="col"></th>
                             </tr>
                             </thead>
                             <tbody>
-                                @foreach($sliders as $slider)
-                                    <tr>
-                                        <th scope="row">{{$slider->id}}</th>
-                                        <td>{{$slider->title}}</td>
-                                        <td>{{$slider->description}}</td>
-                                        <td><img class="image_slider" src="{{$slider->image_path}}" alt=""></td>
-                                        <td>
-                                            <a href="{{route('slider.edit', ['id' => $slider->id])}}"
-                                                class="btn btn-default">Edit</a>
-                                            <a href=""
-                                                class="btn btn-danger">Delete</a>
-                                        </td>
-                                    </tr>
-                                @endforeach
+                            @foreach($newss as $news)
+                                <tr>
+                                    <th scope="row">{{$news->id}}</th>
+                                    <td>{{$news->title}}</td>
+                                    <td>{{$news->notes}}</td>
+                                    <td><img class="image_slider" src="{{$news->image}}" alt=""></td>
+                                    <td>
+                                        <a href="{{route('news.edit', ['id' => $news->id])}}"
+                                           class="btn btn-default">Edit</a>
+                                        <a href=""
+                                           class="btn btn-danger">Delete</a>
+                                    </td>
+                                </tr>
+                            @endforeach
 
                             </tbody>
                         </table>

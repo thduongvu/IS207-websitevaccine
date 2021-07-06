@@ -27,7 +27,7 @@ class AdminSliderController extends Controller
 
     public function store(SliderAddRequest $request){
         $dataInsert = [
-            'name' => $request->name,
+            'title' => $request->title,
             'description' => $request->description
         ];
         $dataImageSlider = $this->storageTraitUpload($request, 'image_path', 'slider');
@@ -46,7 +46,7 @@ class AdminSliderController extends Controller
     public function update($id, Request $request)
     {
         $dataUpdate = [
-            'name' => $request->name,
+            'title' => $request->title,
             'description' => $request->description
         ];
         $dataImageSlider = $this->storageTraitUpload($request, 'image_path', 'slider');
