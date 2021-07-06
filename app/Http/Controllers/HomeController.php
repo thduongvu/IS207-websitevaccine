@@ -88,6 +88,9 @@ class HomeController extends Controller
         $vaccines = VaccineCategory::where('idparent', 0)->get();
         $vaccines_full = VaccineCategory::where('idparent', '>', 0)->paginate(12);
         //->latest('vaccine_name')->get();
+
+        //$video_id = $req->$video_id;
+        //$video = find
         return view('test1', compact('vaccines', 'vaccines_full'));
     }
 

@@ -34,7 +34,6 @@
                             </div>
                             <div class="col-sm-7">
                                 <div class="product-information"><!--/product-information-->
-                                    <img src="images/product-details/new.jpg" class="newarrival" alt=""/>
                                     <h2>{{$detail_key->vaccine_name}}</h2>
                                     <p>{{$detail_key->status}}</p>
                                     <span>
@@ -56,8 +55,7 @@
                                         @endif
                                     </p>
                                     <p><b>Lần cuối cập nhật:</b> {{$detail_key->updated_at}}</p>
-                                    <a href=""><img src="images/product-details/share.png" class="share img-responsive"
-                                                    alt=""/></a>
+
                                 </div><!--/product-information-->
                             </div>
                         </div><!--/product-details-->
