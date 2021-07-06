@@ -19,7 +19,9 @@ Route::get('/test','HomeController@test')->name('test');
 Route::get('/test1','HomeController@test1');
 //Route::get('/chi-tiet-vac-xin/{id}','HomeController@test');
 
-Route::post('/test',  'HomeController@posttest')->name('posttest');
+Route::post('/posttest',  'HomeController@posttest')->name('posttest');
+
+Route::post('/postlogin',  'HomeController@postlogin')->name('postlogin');
 
 
 Route::get('/extension','HomeController@extension');
@@ -40,6 +42,9 @@ Route::get('vaccinefull/add-favo/{id}', 'HomeController@addtofavo')->name('addto
 Route::get('/choose','HomeController@choose');
 
 Route::get('/developing','HomeController@developing');
+
+Route::get('/search','HomeController@search');
+
 
 
 

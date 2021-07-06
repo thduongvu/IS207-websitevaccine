@@ -33,10 +33,9 @@
                 <div class="col-md-8 clearfix">
                     <div class="shop-menu clearfix pull-right">
                         <ul class="nav navbar-nav">
-                            <li><a href=""><i class="fa fa-user"></i> Thuỳ Dương</a></li>
                             <li><a href="http://localhost:8000/vaccinestatus"><i class="fa fa-crosshairs"></i> Kiểm tra tình trạng vắc xin</a></li>
-                            <li><a href="http://localhost:8000/developing"><i class="fa fa-star"></i> Danh sách yêu thích</a></li>
-                            <li><a href="login.html"><i class="fa fa-lock"></i> Đăng nhập</a></li>
+                            <li><a href="http://localhost:8000/developing"><i class="fa fa-star"></i> Đăng ký lịch hẹn</a></li>
+                            <li><a href="http://localhost:8000/test"><i class="fa fa-lock"></i> Đăng nhập</a></li>
                         </ul>
                     </div>
                 </div>
@@ -83,7 +82,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="search_box pull-right">
-                        <input type="text" placeholder="Tìm kiếm"/>
+                        <input type="text" name="key" placeholder="Tìm kiếm"/>
                     </div>
                 </div>
             </div>

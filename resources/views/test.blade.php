@@ -21,28 +21,34 @@
             <div class="row">
                 <div class="col-sm-4 col-sm-offset-1">
                     <div class="login-form"><!--login form-->
-                        <h2>Login to your account</h2>
-                        <form action="#">
-                            <input type="text" placeholder="fullname"/>
-                            <input type="email" placeholder="username"/>
+                        <h2>Đăng nhập</h2>
+                        <form action="{{route('postlogin')}}" method="post">
+                            <input type="hidden" name="_token" value="{{csrf_token()}}">
+
+                            @if(Session::has('flag'))
+                                <div class="alert alert-{{Session::get('flag')}}">{{Session::get('msg')}}</div>
+                            @endif
+
+                            <input type="text" name="username" placeholder="Tên người dùng"/>
+                            <input type="password" name="password" placeholder="Mật khẩu"/>
                             <span>
 								<input type="checkbox" class="checkbox">
-								Keep me signed in
+								Giữ trạng thái đăng nhập
 							</span>
-                            <button type="submit" class="btn btn-default">Login</button>
+                            <button type="submit" class="btn btn-default">Đăng nhập</button>
                         </form>
                     </div><!--/login form-->
                 </div>
 
                 <div class="col-sm-1">
-                    <h2 class="or">OR</h2>
+                    <h2 class="or"><></h2>
                 </div>
 
                 <div class="col-sm-5">
                     <div class="signup-form"><!--sign up form-->
-                        <h2>New User Signup!</h2>
+                        <h2>Đăng ký tài khoản mới</h2>
                         <form action="{{route('posttest')}}" method="post">
-                            <input type="hidden" name="_token" value="{{csrf_token()}}"></form>
+                            <input type="hidden" name="_token" value="{{csrf_token()}}">
                             @if(count($errors)>0)
                                 <div class="alert alert-warning">
                                     @foreach($errors->all() as $error)
