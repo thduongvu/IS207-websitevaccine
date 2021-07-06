@@ -14,16 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/','HomeController@index');
-Route::get('/test','HomeController@test');
+Route::get('/test','HomeController@test')->name('test');
+
 Route::get('/test1','HomeController@test1');
 //Route::get('/chi-tiet-vac-xin/{id}','HomeController@test');
+
+Route::post('/test',  'HomeController@posttest')->name('posttest');
 
 
 Route::get('/extension','HomeController@extension');
 Route::get('/childcalendar','HomeController@childcalendar');
 Route::get('/adultcalendar','HomeController@adultcalendar');
 
-Route::get('/vaccinelist','HomeController@vaccinelist');
+Route::get('/vaccinelist','HomeController@vaccinelist')->name('vaccinelist');;
 Route::get('/vaccinestatus','VaccineController@tablevaccine');
 
 Route::get('/vaccinetype','HomeController@vaccinetype');
