@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PHPUnit">
+    <option name="directories">
+      <list>
+<<<<<<< .merge_file_a10956
+        <option value="$PROJECT_DIR$/tests/Unit" />
+        <option value="$PROJECT_DIR$/tests/Feature" />
+=======
+        <option value="$PROJECT_DIR$/tests" />
+>>>>>>> .merge_file_a17764
+      </list>
+    </option>
+  </component>
+</project>
