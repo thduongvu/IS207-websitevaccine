@@ -78,4 +78,11 @@ class VaccineController extends Controller
         $this->vaccine->find($id)->delete();
         return redirect() -> route('vaccines.index');
     }
+    public function tablevaccine()
+    {
+        $vaccines = $this->vaccine->all();
+        $recusive = new Recusive($vaccines);
+        $htmlTable = $recusive->categoryTableHome();
+        return view('vaccinelist.vaccinestatus', compact('htmlTable'));
+    }
 }

@@ -29,99 +29,100 @@
                                 <img src="/eshopper/images/home/slider1.jpg" class="girl img-responsive" alt=""/>
                             </div>
                         </div>
-
+                @foreach($sliders as $slider)
                         <div class="item">
                             <div class="col-sm-6">
                                 <h1><span>PHAN</span> VU</h1>
                                 <h2>VACCINATION SYSTEM</h2>
-                                <p>Tiêm chủng vắc xin giúp giảm nguy cơ bệnh nặng hoặc tử vong khi mắc COVID-19. </p>
+                                <p>{{$slider->description}}</p>
                                 <a href="http://localhost:8000/vaccinetype">
                                     <button type="button" class="btn btn-default get">Tìm hiểu ngay</button>
                                 </a>
                             </div>
                             <div class="col-sm-6">
-                                <img src="/eshopper/images/home/slider2.jpg" class="girl img-responsive" alt=""/>
+                                <img src="{{$slider->image_path}}" class="girl img-responsive" alt=""/>
                             </div>
                         </div>
+                        @endforeach
 
-                        <div class="item">
-                            <div class="col-sm-6">
-                                <h1><span>PHAN</span> VU</h1>
-                                <h2>VACCINATION SYSTEM</h2>
-                                <p> Bộ Y tế và WHO khuyến khích mọi người thường xuyên thực hành các hoạt động thể chất
-                                    đơn giản và vui vẻ khi ở nhà để giữ cho bạn luôn khỏe mạnh và tích cực.</p>
-                                <a href="http://localhost:8000/vaccinetype">
-                                    <button type="button" class="btn btn-default get">Đặt lịch hẹn</button>
-                                </a>
-                            </div>
-                            <div class="col-sm-6">
-                                <img src="/eshopper/images/home/slider3.jpg" class="girl img-responsive" alt=""/>
-                            </div>
-                        </div>
+{{--                        <div class="item">--}}
+{{--                            <div class="col-sm-6">--}}
+{{--                                <h1><span>PHAN</span> VU</h1>--}}
+{{--                                <h2>VACCINATION SYSTEM</h2>--}}
+{{--                                <p> Bộ Y tế và WHO khuyến khích mọi người thường xuyên thực hành các hoạt động thể chất--}}
+{{--                                    đơn giản và vui vẻ khi ở nhà để giữ cho bạn luôn khỏe mạnh và tích cực.</p>--}}
+{{--                                <a href="http://localhost:8000/vaccinetype">--}}
+{{--                                    <button type="button" class="btn btn-default get">Đặt lịch hẹn</button>--}}
+{{--                                </a>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-sm-6">--}}
+{{--                                <img src="/eshopper/images/home/slider3.jpg" class="girl img-responsive" alt=""/>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
-                        <div class="item">
-                            <div class="col-sm-6">
-                                <h1><span>PHAN</span> VU</h1>
-                                <h2>VACCINATION SYSTEM</h2>
-                                <p>Hãy vận động khi ở nhà trong mùa dịch #COVID19 để duy trì sức khỏe, có cơ thể rắn
-                                    chắc và linh hoạt. Vận động cũng tốt cho cả sức khỏe trí não và tinh thần. </p>
-                                <button type="button" class="btn btn-default get">Đặt lịch hẹn</button>
-                            </div>
-                            <div class="col-sm-6">
-                                <img src="/eshopper/images/home/slider4.png" class="girl img-responsive" alt=""/>
-                            </div>
-                        </div>
+{{--                        <div class="item">--}}
+{{--                            <div class="col-sm-6">--}}
+{{--                                <h1><span>PHAN</span> VU</h1>--}}
+{{--                                <h2>VACCINATION SYSTEM</h2>--}}
+{{--                                <p>Hãy vận động khi ở nhà trong mùa dịch #COVID19 để duy trì sức khỏe, có cơ thể rắn--}}
+{{--                                    chắc và linh hoạt. Vận động cũng tốt cho cả sức khỏe trí não và tinh thần. </p>--}}
+{{--                                <button type="button" class="btn btn-default get">Đặt lịch hẹn</button>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-sm-6">--}}
+{{--                                <img src="/eshopper/images/home/slider4.png" class="girl img-responsive" alt=""/>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
-                        <div class="item">
-                            <div class="col-sm-6">
-                                <h1><span>PHAN</span> VU</h1>
-                                <h2>VACCINATION SYSTEM</h2>
-                                <p>Những người khỏe mạnh có thể phát triển và cống hiến nhiều hơn cho xã hội. </p>
-                                <button type="button" class="btn btn-default get">Tìm hiểu ngay</button>
-                            </div>
-                            <div class="col-sm-6">
-                                <img src="/eshopper/images/home/slider5.jpg" class="girl img-responsive" alt=""/>
-                            </div>
-                        </div>
+{{--                        <div class="item">--}}
+{{--                            <div class="col-sm-6">--}}
+{{--                                <h1><span>PHAN</span> VU</h1>--}}
+{{--                                <h2>VACCINATION SYSTEM</h2>--}}
+{{--                                <p>Những người khỏe mạnh có thể phát triển và cống hiến nhiều hơn cho xã hội. </p>--}}
+{{--                                <button type="button" class="btn btn-default get">Tìm hiểu ngay</button>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-sm-6">--}}
+{{--                                <img src="/eshopper/images/home/slider5.jpg" class="girl img-responsive" alt=""/>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
-                        <div class="item">
-                            <div class="col-sm-6">
-                                <h1><span>PHAN</span> VU</h1>
-                                <h2>VACCINATION SYSTEM</h2>
-                                <p>Vắc xin và tiêm chủng là biện pháp phòng bệnh hiệu quả nhất để làm giảm tỷ lệ mắc
-                                    bệnh và tỷ lệ tử vong do bệnh truyền nhiễm của nhân loại. </p>
-                                <button type="button" class="btn btn-default get">Tìm hiểu ngay</button>
-                            </div>
-                            <div class="col-sm-6">
-                                <img src="/eshopper/images/home/slider6.jpg" class="girl img-responsive" alt=""/>
-                            </div>
-                        </div>
+{{--                        <div class="item">--}}
+{{--                            <div class="col-sm-6">--}}
+{{--                                <h1><span>PHAN</span> VU</h1>--}}
+{{--                                <h2>VACCINATION SYSTEM</h2>--}}
+{{--                                <p>Vắc xin và tiêm chủng là biện pháp phòng bệnh hiệu quả nhất để làm giảm tỷ lệ mắc--}}
+{{--                                    bệnh và tỷ lệ tử vong do bệnh truyền nhiễm của nhân loại. </p>--}}
+{{--                                <button type="button" class="btn btn-default get">Tìm hiểu ngay</button>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-sm-6">--}}
+{{--                                <img src="/eshopper/images/home/slider6.jpg" class="girl img-responsive" alt=""/>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
-                        <div class="item">
-                            <div class="col-sm-6">
-                                <h1><span>PHAN</span> VU</h1>
-                                <h2>VACCINATION SYSTEM</h2>
-                                <p>Hãy coi việc tiêm chủng không chỉ là quyền lợi, trách nhiệm của mỗi cá nhân mà còn là
-                                    trách nhiệm đối với cộng đồng và toàn xã hội. </p>
-                                <button type="button" class="btn btn-default get">Đặt lịch hẹn</button>
-                            </div>
-                            <div class="col-sm-6">
-                                <img src="/eshopper/images/home/slider7.jpg" class="girl img-responsive" alt=""/>
-                            </div>
-                        </div>
+{{--                        <div class="item">--}}
+{{--                            <div class="col-sm-6">--}}
+{{--                                <h1><span>PHAN</span> VU</h1>--}}
+{{--                                <h2>VACCINATION SYSTEM</h2>--}}
+{{--                                <p>Hãy coi việc tiêm chủng không chỉ là quyền lợi, trách nhiệm của mỗi cá nhân mà còn là--}}
+{{--                                    trách nhiệm đối với cộng đồng và toàn xã hội. </p>--}}
+{{--                                <button type="button" class="btn btn-default get">Đặt lịch hẹn</button>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-sm-6">--}}
+{{--                                <img src="/eshopper/images/home/slider7.jpg" class="girl img-responsive" alt=""/>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
-                        <div class="item">
-                            <div class="col-sm-6">
-                                <h1><span>PHAN</span> VU</h1>
-                                <h2>VACCINATION SYSTEM</h2>
-                                <p>Cho đến hiện nay, y học thế giới vẫn khẳng định tiêm chủng là một giải pháp hữu hiệu
-                                    trong nhiệm vụ phòng tránh bệnh tật. </p>
-                                <button type="button" class="btn btn-default get">Đặt lịch hẹn</button>
-                            </div>
-                            <div class="col-sm-6">
-                                <img src="/eshopper/images/home/slider8.jpg" class="girl img-responsive" alt=""/>
-                            </div>
-                        </div>
+{{--                        <div class="item">--}}
+{{--                            <div class="col-sm-6">--}}
+{{--                                <h1><span>PHAN</span> VU</h1>--}}
+{{--                                <h2>VACCINATION SYSTEM</h2>--}}
+{{--                                <p>Cho đến hiện nay, y học thế giới vẫn khẳng định tiêm chủng là một giải pháp hữu hiệu--}}
+{{--                                    trong nhiệm vụ phòng tránh bệnh tật. </p>--}}
+{{--                                <button type="button" class="btn btn-default get">Đặt lịch hẹn</button>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-sm-6">--}}
+{{--                                <img src="/eshopper/images/home/slider8.jpg" class="girl img-responsive" alt=""/>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
                     </div>
 

@@ -4,24 +4,27 @@ namespace App\Http\Controllers;
 
 use App\Doctor;
 use App\Immunizier;
+use App\Slider;
 use App\Useraccount;
 use App\VaccineCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Auth;
 use Mail;
+use DB;
 
 class HomeController extends Controller
 {
     public function index()
     {
+        $sliders = Slider::latest()->get();
         $vaccines = VaccineCategory::where('idparent', 0)->get();
         $doctors = Doctor::latest()->get();
         $vaccines_1 = VaccineCategory::where('idparent', '>', 0)->latest()->take(4)->get(); // new
         $vaccines_rcm = VaccineCategory::where('idparent', '>', 0)->latest('views_count', 'desc')->take(8)->get();
         //$news = New::where('idparent', 0)->get();
         //dd($vaccines_rcm);
-        return view('home.home', compact('vaccines', 'vaccines_1', 'doctors', 'vaccines_rcm'));
+        return view('home.home', compact('vaccines', 'vaccines_1', 'doctors', 'vaccines_rcm', 'sliders'));
 
     }
 
