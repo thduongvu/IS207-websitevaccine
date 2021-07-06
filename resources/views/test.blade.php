@@ -23,11 +23,8 @@
                     <div class="login-form"><!--login form-->
                         <h2>Đăng nhập</h2>
                         <form action="{{route('postlogin')}}" method="post">
-                            <input type="hidden" name="_token" value="{{csrf_token()}}">
 
-                            @if(Session::has('flag'))
-                                <div class="alert alert-{{Session::get('flag')}}">{{Session::get('msg')}}</div>
-                            @endif
+                            @csrf
 
                             <input type="text" name="username" placeholder="Tên người dùng"/>
                             <input type="password" name="password" placeholder="Mật khẩu"/>

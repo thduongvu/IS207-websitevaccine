@@ -17,6 +17,8 @@ use DB;
 
 class HomeController extends Controller
 {
+    private $result;
+
     public function index()
     {
         $sliders = Slider::latest()->take(7)->get();
@@ -33,7 +35,9 @@ class HomeController extends Controller
     public function dangky()
     {
 
-        return view('dangky');
+        $immuniziers = DB::table('immuniziers')->where('username', $result->username)->get();
+
+        return view('home.dangky', compact('immuniziers'));
     }
 
     public function postdangky(Request $req)
@@ -122,7 +126,7 @@ class HomeController extends Controller
         $pass = $req->password;
 
         $result = Immunizier::where('username', $usr)->where('password', $pass)->get();
-
+        dd($result);
         if ($result) {
             return redirect()->back()->with(['flag' => 'success', 'msg' => 'Đã đăng nhập thành công']);
         } else {
