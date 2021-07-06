@@ -17,9 +17,15 @@ class AdminAppoinmentController extends Controller
     public function index()
     {
         $appoinments = DB::table('appoinments')
-            ->join('immunizers', 'immunizers.id', '=', 'appoinments.immunizer_id')
-            ->select('appoinments.*', 'immunizers.fullname')
+            ->join('immuniziers', 'immuniziers.id', '=', 'appoinments.immunizier_id')
+            ->select('appoinments.*', 'immuniziers.fullname')
             ->get();
         return view('admin.appointment.index',compact('appoinments'));
+    }
+
+    public function search(Request $request)
+    {
+        $appointment = DB::table('appoinments')->where('immuniziers.fullname','like', '%'.$request->key.'%')->get();
+        return view('admin.appointment.index', compact('appointment'));
     }
 }

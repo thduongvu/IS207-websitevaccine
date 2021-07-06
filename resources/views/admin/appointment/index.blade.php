@@ -5,7 +5,7 @@
 @endsection
 
 @section('css')
-    <link rel="stylesheet" href="{{asset('backend/Immunizer/add.css')}}">
+    <link rel="stylesheet" href="{{asset('backend/immunizier/add.css')}}">
 @endsection
 
 @section('content')
@@ -41,7 +41,6 @@
                                 <th scope="col">Họ và tên</th>
                                 <th scope="col">Ngày hẹn</th>
                                 <th scope="col">Khung giờ hẹn</th>
-                                <th scope="col">Trung tâm</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -51,7 +50,6 @@
                                     <td>{{$appoinment->fullname}}</td>
                                     <td>{{$appoinment->appoinment_date}}</td>
                                     <td>{{$appoinment->appoinment_time}}</td>
-                                    <td>{{$appoinment->centre_name}}</td>
                                 </tr>
                             @endforeach
 

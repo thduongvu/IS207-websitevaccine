@@ -27,6 +27,8 @@ Route::get('/bs6','HomeController@bs6');
 Route::post('/posttest',  'HomeController@posttest')->name('posttest');
 
 Route::post('/postlogin',  'HomeController@postlogin')->name('postlogin');
+Route::post('/postreport',  'HomeController@postreport')->name('postreport');
+
 
 Route::get('/dangky','HomeController@dangky');
 
@@ -127,14 +129,14 @@ Route::prefix('slider')->group(function () {
     ]);
 });
 
-Route::prefix('immunizer')->group(function () {
+Route::prefix('immunizier')->group(function () {
     Route::get('/', [
-        'as' => 'immunizer.index',
-        'uses' => 'AdminImmunizerController@index'
+        'as' => 'immunizier.index',
+        'uses' => 'AdminimmunizierController@index'
     ]);
     Route::get('/search', [
-        'as' => 'immunizer.search',
-        'uses' => 'AdminImmunizerController@search'
+        'as' => 'immunizier.search',
+        'uses' => 'AdminimmunizierController@search'
     ]);
 });
 

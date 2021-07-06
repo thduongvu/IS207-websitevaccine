@@ -41,10 +41,10 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{route('immunizer.index')}}" class="nav-link">
+                    <a href="{{route('immunizier.index')}}" class="nav-link">
                         <i class="nav-icon fas fa-user-friends"></i>
                         <p>
-                            Immunizer
+                            immunizier
                         </p>
                     </a>
                 </li>
