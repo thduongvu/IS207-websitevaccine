@@ -23,11 +23,7 @@
                             {{Session::get('success')}}
                         </div>
                     @endif
-                    <select name="" id="">
-                    @foreach($immuniziers as $immunizier)
-                            <option value="">{{$immunizier->fullname}}</option>
-                    @endforeach
-                    </select>
+                    <input type="text" placeholder="Nhập mã người được tiêm chủng" name="id">
                     <input placeholder="Ngày hẹn *" class="textbox-n" type="text" onfocus="(this.type='date')"
                            name="appoinment_date">
                     <select name="appoinment_time">

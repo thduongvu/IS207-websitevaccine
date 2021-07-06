@@ -36,8 +36,12 @@ Route::get('/extension','HomeController@extension');
 Route::get('/childcalendar','HomeController@childcalendar');
 Route::get('/adultcalendar','HomeController@adultcalendar');
 
-Route::get('/vaccinelist','HomeController@vaccinelist')->name('vaccinelist');;
+Route::get('/vaccinelist','HomeController@vaccinelist')->name('vaccinelist');
 Route::get('/vaccinestatus','VaccineController@tablevaccine');
+Route::get('/vaccinestatussearch',[
+   'as' => 'vaccine.search',
+   'uses' => 'VaccineController@search'
+]);
 
 Route::get('/vaccinetype','HomeController@vaccinetype');
 Route::get('/chi-tiet-vac-xin/{id}','HomeController@detailvaccine');

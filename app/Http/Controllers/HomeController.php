@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Auth;
+use Illuminate\Support\Facades\Redirect;
 use Mail;
 use DB;
 
@@ -32,25 +33,19 @@ class HomeController extends Controller
 
     }
 
-    public function dangky()
-    {
 
-        $immuniziers = DB::table('immuniziers')->where('username', $result->username)->get();
-
-        return view('home.dangky', compact('immuniziers'));
-    }
 
     public function postdangky(Request $req)
     {
         $validatedData = $req->validate([
-            'fullname' => 'required',
+            'id' => 'required',
             'appoinment_date' => 'required',
             'appoinment_time' => 'required',
         ]);
 
         $ap = new Appoinment();
 
-        $ap->fullname = $req->fullname;
+        $ap->immunizier_id = $req->id;
         $ap->appoinment_date = $req->appoinment_date;
         $ap->appoinment_time = $req->appoinment_time;
         $ap->save();
@@ -125,10 +120,10 @@ class HomeController extends Controller
         $usr = $req->username;
         $pass = $req->password;
 
-        $result = Immunizier::where('username', $usr)->where('password', $pass)->get();
-        dd($result);
-        if ($result) {
-            return redirect()->back()->with(['flag' => 'success', 'msg' => 'Đã đăng nhập thành công']);
+        $this->result = DB::table('immuniziers')->where('username', $usr)->where('password', $pass)->first();
+        dd($this->result);
+        if ($this->result) {
+            return Redirect::to('');
         } else {
             return redirect()->back()->with(['flag' => 'warning', 'msg' => 'Đăng nhập thất bại']);
         }
@@ -141,7 +136,12 @@ class HomeController extends Controller
         //->latest('vaccine_name')->get();
         return view('test1', compact('vaccines', 'vaccines_full'));
     }
+    public function dangky()
+    {
+        $immuniziers = DB::table('immuniziers')->where('username', $this->result['username'])->get();
 
+        return view('home.dangky', compact('immuniziers'));
+    }
 
     public function extension()
     {

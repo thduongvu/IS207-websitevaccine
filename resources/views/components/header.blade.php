@@ -65,7 +65,7 @@
                                     <li><a href="http://localhost:8000/vaccinetype">Thông tin vắc xin</a></li>
                                     <li><a href="http://localhost:8000/childcalendar">Lịch tiêm chủng trẻ em</a></li>
                                     <li><a href="http://localhost:8000/adultcalendar">Lịch tiêm chủng người lớn</a></li>
-                                    <li><a href="cart.html">Đăng ký lịch hẹn tiêm chủng</a></li>
+                                    <li><a href="http://localhost:8000/dangky">Đăng ký lịch hẹn tiêm chủng</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown"><a href="#">Tin tức<i class="fa fa-angle-down"></i></a>

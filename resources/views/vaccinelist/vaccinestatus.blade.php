@@ -9,6 +9,18 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+                <form action="{{route('vaccine.search')}}" method="get">
+                    @csrf
+                    <div class="form-group">
+                        <label >Tên Vắc-xin</label>
+                        <select class="form-control" name="id">
+                            <option value="0">Vắc-xin</option>
+                            {!! $htmlSelect !!}
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+                </form>
                 <table class="table table-bordered">
                     <thead>
                     <tr>
