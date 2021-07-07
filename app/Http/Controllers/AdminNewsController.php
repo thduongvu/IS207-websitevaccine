@@ -16,7 +16,7 @@ class AdminNewsController extends Controller
     }
 
     public function index(){
-        $newss = $this->news->paginate(5);
+        $newss = $this->news->all();
         return view('admin.news.index',compact('newss'));
     }
 

@@ -30,7 +30,7 @@
                                 <th scope="col">Tên slider</th>
                                 <th scope="col">Description</th>
                                 <th scope="col">Hình ảnh</th>
-                                <th scope="col"></th>
+                                <th scope="col">Chức năng</th>
                             </tr>
                             </thead>
                             <tbody>

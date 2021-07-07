@@ -12,21 +12,38 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/truoc','HomeController@truoc');
+Route::get('/sau','HomeController@sau');
+Route::get('/covid','HomeController@covid');
+Route::get('/doctorteam','HomeController@doctorteam');
+
 
 Route::get('/','HomeController@index');
 Route::get('/test','HomeController@test')->name('test');
 
 Route::get('/test1','HomeController@test1');
 //Route::get('/chi-tiet-vac-xin/{id}','HomeController@test');
+
 Route::get('/bs1','HomeController@bs1');
 Route::get('/bs2','HomeController@bs2');
 Route::get('/bs3','HomeController@bs3');
 Route::get('/bs6','HomeController@bs6');
 
+Route::get('/bb1','HomeController@bb1');
+Route::get('/bb2','HomeController@bb2');
+Route::get('/bb3','HomeController@bb3');
+Route::get('/bb4','HomeController@bb4');
+Route::get('/bb5','HomeController@bb5');
+Route::get('/bb6','HomeController@bb6');
+Route::get('/bb7','HomeController@bb7');
+
+
+
 
 Route::post('/posttest',  'HomeController@posttest')->name('posttest');
 
 Route::post('/postlogin',  'HomeController@postlogin')->name('postlogin');
+
 Route::post('/postreport',  'HomeController@postreport')->name('postreport');
 
 
@@ -63,6 +80,8 @@ Route::get('/search','HomeController@search');
 Route::get('/send-mail','HomeController@send_mail');
 
 Route::get('/send-report','HomeController@send_report');
+
+Route::get('/send-login','HomeController@send_login');
 
 
 //admin

@@ -34,8 +34,8 @@
                     <div class="shop-menu clearfix pull-right">
                         <ul class="nav navbar-nav">
                             <li><a href="http://localhost:8000/vaccinestatus"><i class="fa fa-crosshairs"></i> Kiểm tra tình trạng vắc xin</a></li>
-                            <li><a href="http://localhost:8000/test1"><i class="fa fa-star"></i> Đăng ký lịch hẹn</a></li>
-                            <li><a href="http://localhost:8000/test"><i class="fa fa-lock"></i> Đăng nhập</a></li>
+                            <li><a href="http://localhost:8000/dangky"><i class="fa fa-star"></i> Đăng ký lịch hẹn</a></li>
+                            <li><a href="http://localhost:8000/test"><i class="fa fa-lock"></i> Đăng nhập / Đăng ký tài khoản</a></li>
                         </ul>
                     </div>
                 </div>
@@ -70,21 +70,17 @@
                             </li>
                             <li class="dropdown"><a href="#">Tin tức<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="blog.html">Những điều cần biết trước khi tiêm</a></li>
-                                    <li><a href="blog-single.html">Những điều cần biết sau khi tiêm</a></li>
-                                    <li><a href="blog-single.html">Thông tin về vắc xin COVID-19</a></li>
+                                    <li><a href="http://localhost:8000/truoc">Những điều cần biết trước khi tiêm</a></li>
+                                    <li><a href="http://localhost:8000/sau">Những điều cần biết sau khi tiêm</a></li>
+                                    <li><a href="http://localhost:8000/covid">Thông tin về vắc xin COVID-19</a></li>
+                                    <li><a href="http://localhost:8000/extension">Video tin tức</a></li>
                                 </ul>
                             </li>
-                            <li><a href="http://localhost:8000/developing">Báo cáo sau tiêm</a></li>
-                            <li><a href="http://localhost:8000/test">Hướng dẫn</a></li>
+                            <li><a href="http://localhost:8000/test1">Báo cáo sau tiêm</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-3">
-                    <div class="search_box pull-right">
-                        <input type="text" name="key" placeholder="Tìm kiếm"/>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div><!--/header-bottom-->

@@ -27,7 +27,7 @@
                                 <th scope="col">Tên Vắc-xin</th>
                                 <th scope="col">Trạng thái</th>
                                 <th scope="col">Số lượng</th>
-                                <th scope="col"></th>
+                                <th scope="col">Chức năng</th>
                             </tr>
                             </thead>
                             <tbody>

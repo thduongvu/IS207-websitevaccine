@@ -23,7 +23,6 @@
                     <div class="col-md-12">
                         <form action="" method="get" class="form-search float-right m-2">
                             @csrf
-                            <input type="datetime-local" name="datetime" class="form-control">
                             <div class="form-group">
                                 <input type="text" class="form-control"
                                        name="key"

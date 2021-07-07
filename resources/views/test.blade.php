@@ -81,7 +81,10 @@
                             <input type="password" name="password" placeholder="Mật khẩu"/>
                             <input type="password" name="retype" placeholder="Nhập lại mật khẩu"/>
 
-                            <button type="submit" class="btn btn-default">Đăng ký</button>
+                            <div class="form-group">
+                                <button type="submit"  class="btn btn-default"><a href="http://localhost:8000/send-login">Đăng ký</a> </button>
+
+                            </div>
                         </form>
                     </div><!--/sign up form-->
                 </div>

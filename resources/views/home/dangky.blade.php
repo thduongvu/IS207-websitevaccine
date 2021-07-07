@@ -46,10 +46,9 @@
                     </select>
                     <br><br>
 
-                    <button type="submit" class="btn btn-default">Xác nhận đăng ký</button>
+                    <button type="submit"  class="btn btn-default"><a href="http://localhost:8000/send-mail">Xác nhận đăng ký</a> </button>
                 </form>
             </div><!--/sign up form-->
         </div>
     </div>
 @endsection
-

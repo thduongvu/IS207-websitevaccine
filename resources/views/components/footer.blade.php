@@ -21,10 +21,9 @@
                     <div class="single-widget">
                         <h2>Mở rộng</h2>
                         <ul class="nav nav-pills nav-stacked">
-                            <li><a href="http://localhost:8000/developing">Đội ngũ bác sĩ</a></li>
-                            <li><a href="http://localhost:8000/developing">Đặt lịch hẹn tiêm chủng</a></li>
-                            <li><a href="http://localhost:8000/developing">Khai báo y tế</a></li>
-                            <li><a href="http://localhost:8000/developing">Phản hồi sau tiêm chủng</a></li>
+                            <li><a href="http://localhost:8000/doctorteam">Đội ngũ bác sĩ</a></li>
+                            <li><a href="http://localhost:8000/test">Đặt lịch hẹn tiêm chủng</a></li>
+                            <li><a href="http://localhost:8000/test1">Phản hồi sau tiêm chủng</a></li>
                             <li><a href="http://localhost:8000/developing">Hướng dẫn sử dụng</a></li>
                         </ul>
                     </div>

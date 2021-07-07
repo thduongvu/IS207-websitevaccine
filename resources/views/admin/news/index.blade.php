@@ -30,7 +30,7 @@
                                 <th scope="col">Tên bài báo</th>
                                 <th scope="col">Ghi chú</th>
                                 <th scope="col">Hình ảnh</th>
-                                <th scope="col"></th>
+                                <th scope="col">Chức năng</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -43,8 +43,7 @@
                                     <td>
                                         <a href="{{route('news.edit', ['id' => $news->id])}}"
                                            class="btn btn-default">Edit</a>
-                                        <a href=""
-                                           class="btn btn-danger">Delete</a>
+
                                     </td>
                                 </tr>
                             @endforeach

@@ -33,7 +33,7 @@
                             <img object-fit="contain" src="/eshopper/images/home/bb2.jpg" alt=""/>
                             <h5>Lịch tiêm chủng khuyến nghị</h5>
                             <p>Mọi lứa tuổi đều cần được chủng ngừa</p>
-                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-newspaper-o"></i>Đọc tiếp ...</a>
+                            <a href="http://localhost:8000/bb1" class="btn btn-default add-to-cart"><i class="fa fa-newspaper-o"></i>Đọc tiếp ...</a>
                         </div>
 
                     </div>
@@ -59,7 +59,7 @@
                             <img src="/eshopper/images/home/bb4.png" alt=""/>
                             <h5>Tại sao cần khám sàng lọc</h5>
                             <p>Khám sàng lọc bao gồm những gì</p>
-                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-newspaper-o"></i>Đọc tiếp ...</a>
+                            <a href="http://localhost:8000/bb2" class="btn btn-default add-to-cart"><i class="fa fa-newspaper-o"></i>Đọc tiếp ...</a>
                         </div>
 
                     </div>
@@ -76,7 +76,7 @@
                             <img object-fit="contain" src="/eshopper/images/home/after1.png" alt=""/>
                             <h5>Tác dụng phụ của vắc xin COVID-19</h5>
                             <p>Các dấu hiệu bất thường cần liên hệ trung tâm y tế</p>
-                            <a href="#" class="btn btn-default add-to-cart"><i class="fa" aria-hidden="true"></i>Đọc tiếp ...</a>
+                            <a href="http://localhost:8000/bb3" class="btn btn-default add-to-cart"><i class="fa" aria-hidden="true"></i>Đọc tiếp ...</a>
                         </div>
 
                     </div>

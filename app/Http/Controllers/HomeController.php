@@ -13,7 +13,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Auth;
-use Illuminate\Support\Facades\Redirect;
 use Mail;
 use DB;
 
@@ -34,7 +33,13 @@ class HomeController extends Controller
 
     }
 
+    public function dangky()
+    {
 
+        $immuniziers = DB::table('immuniziers')->where('username', $this->result['username'])->get();
+
+        return view('home.dangky', compact('immuniziers'));
+    }
 
     public function postdangky(Request $req)
     {
@@ -54,6 +59,18 @@ class HomeController extends Controller
         return redirect()->back()->with('success', 'Da dang ky thanh cong');
     }
 
+    public function truoc()
+    {
+        return view('home.truoc');
+    }
+    public function sau()
+    {
+        return view('home.sau');
+    }
+    public function covid()
+    {
+        return view('home.covid');
+    }
 
     public function bs1()
     {
@@ -70,6 +87,35 @@ class HomeController extends Controller
     public function bs6()
     {
         return view('others.bs6');
+    }
+
+    public function bb1()
+    {
+        return view('others.bb1');
+    }
+    public function bb2()
+    {
+        return view('others.bb2');
+    }
+    public function bb3()
+    {
+        return view('others.bb3');
+    }
+    public function bb4()
+    {
+        return view('others.bb4');
+    }
+    public function bb5()
+    {
+        return view('others.bb5');
+    }
+    public function bb6()
+    {
+        return view('others.bb6');
+    }
+    public function bb7()
+    {
+        return view('others.bb7');
     }
 
     public function test()
@@ -124,27 +170,86 @@ class HomeController extends Controller
         $pass = $req->password;
 
         $this->result = DB::table('immuniziers')->where('username', $usr)->where('password', $pass)->first();
-        dd($this->result);
         if ($this->result) {
             return Redirect::to('');
         } else {
             return redirect()->back()->with(['flag' => 'warning', 'msg' => 'Đăng nhập thất bại']);
         }
     }
-
     public function test1()
     {
-        $vaccines = VaccineCategory::where('idparent', 0)->get();
-        $vaccines_full = VaccineCategory::where('idparent', '>', 0)->paginate(12);
-        //->latest('vaccine_name')->get();
-        return view('test1', compact('vaccines', 'vaccines_full'));
+        return view('test1');
     }
-    public function dangky()
+    public function postreport(Request $req)
     {
-        $immuniziers = DB::table('immuniziers')->where('username', $this->result['username'])->get();
+        $validatedData = $req->validate([
+            'email' => 'nullable| email',
+            'name' => 'required',
+            'contents' => 'required',
+        ]);
 
-        return view('home.dangky', compact('immuniziers'));
+        $rp = new Report();
+        $rp->name = $req->name;
+        $rp->email = $req->email;
+        $rp->contents = $req->contents;
+
+        $rp->save();
+
+        return redirect()->back()->with('success', 'Báo cáo đã được gửi đến hệ thống thành công');
     }
+
+    public function send_report()
+    {
+        //send mail
+        $to_name = "PV Vaccination Sys.";
+        $to_email = Immunizier::query()->where('id',2)->first()->mail;
+
+        $data = array("name" => "PV Vaccination Sys.", "body" => "Lưu ý: Đây là email xác nhận tự động từ hệ thống. Vui lòng không trả lời email này."); //body of mail.blade.php
+
+        Mail::send('report', $data, function ($message) use ($to_name, $to_email) {
+            $message->to($to_email)->subject('[PV Vaccination] - Xác nhận báo cáo sốc phản vệ');//send this mail with subject
+            $message->from($to_email, $to_name);//send from this mail
+        });
+        return redirect()->back()->with('success', 'Báo cáo đã được gửi đến hệ thống thành công');
+        //--send mail
+
+    }
+
+    public function send_login()
+    {
+        //send mail
+        $to_name = "PV Vaccination Sys.";
+        $to_email = Immunizier::query()->where('id',2)->first()->mail;
+
+        $data = array("name" => "PV Vaccination Sys.", "body" => "Lưu ý: Đây là email xác nhận tự động từ hệ thống. Vui lòng không trả lời email này."); //body of mail.blade.php
+
+        Mail::send('logincf', $data, function ($message) use ($to_name, $to_email) {
+            $message->to($to_email)->subject('[PV Vaccination] - Xác nhận tạo tài khoản thành công');//send this mail with subject
+            $message->from($to_email, $to_name);//send from this mail
+        });
+        return redirect()->back()->with('success', 'Tài khoản đã được tạo thành công. Vui lòng kiểm tra email của bạn');
+        //--send mail
+
+    }
+
+    public function send_mail()
+    {
+        //send mail
+        $to_name = "PV Vaccination Sys.";
+        $to_email = Immunizier::query()->where('id',2)->first()->mail;
+
+        $data = array("name" => "PV Vaccination Sys.", "body" => "Lưu ý: Quý khách vui lòng kiểm tra tình trạng vắc-xin trước khi đến Viện."); //body of mail.blade.php
+
+        Mail::send('mail', $data, function ($message) use ($to_name, $to_email) {
+            $message->to($to_email)->subject('[PV Vaccination] - Đăng ký lịch tiêm chủng');//send this mail with subject
+            $message->from($to_email, $to_name);//send from this mail
+        });
+        return redirect('/')->with('message','');
+        //--send mail
+
+    }
+
+
 
     public function extension()
     {
@@ -225,56 +330,10 @@ class HomeController extends Controller
         return view('home.search', compact('vaccine', 'vaccines_full'));
     }
 
-    public function send_mail()
-    {
-        //send mail
-        $to_name = "PV Vaccination Sys.";
-        $to_email = Immunizier::query()->where('id',2)->first()->mail;
 
-        $data = array("name" => "PV Vaccination Sys.", "body" => "Lưu ý: Quý khách vui lòng kiểm tra tình trạng vắc-xin trước khi đến Viện."); //body of mail.blade.php
 
-        Mail::send('mail', $data, function ($message) use ($to_name, $to_email) {
-            $message->to($to_email)->subject('[PV Vaccination] - Đăng ký lịch tiêm chủng');//send this mail with subject
-            $message->from($to_email, $to_name);//send from this mail
-        });
-        return redirect('/')->with('message','');
-        //--send mail
 
-    }
 
-    public function send_report()
-    {
-        //send mail
-        $to_name = "PV Vaccination Sys.";
-        $to_email = Immunizier::query()->where('id',2)->first()->mail;
 
-        $data = array("name" => "PV Vaccination Sys.", "body" => "Lưu ý: Đây là email xác nhận tự động từ hệ thống. Vui lòng không trả lời email này."); //body of mail.blade.php
-
-        Mail::send('report', $data, function ($message) use ($to_name, $to_email) {
-            $message->to($to_email)->subject('[PV Vaccination] - Xác nhận báo cáo sốc phản vệ');//send this mail with subject
-            $message->from($to_email, $to_name);//send from this mail
-        });
-        return redirect('/')->with('message','');
-        //--send mail
-
-    }
-
-    public function postreport(Request $req)
-    {
-        $validatedData = $req->validate([
-            'email' => 'nullable| email',
-            'name' => 'required',
-            'contents' => 'required',
-        ]);
-
-        $rp = new Report();
-        $rp->name = $req->name;
-        $rp->email = $req->email;
-        $rp->contents = $req->contents;
-
-        $rp->save();
-
-        return redirect()->back()->with('success', 'Báo cáo đã được gửi đến hệ thống thành công');
-    }
 
 }
